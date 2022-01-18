@@ -12,10 +12,10 @@ bool combine = false;
 CS_Dice_Core.Dice d = new CS_Dice_Core.Dice();
 
 Console.Write("How many dice to roll?: ");
-quan = Console.Read();
+quan = Int32.Parse(Console.ReadLine());
 Console.Write("How many sides should the dice have?: ");
-sides = Console.Read();
-Console.WriteLine("Should I highlight successes??: ");
+sides = Int32.Parse(Console.ReadLine());
+Console.WriteLine("Should I highlight successes?: ");
 string shouldHighlight = Console.ReadLine();
 shouldHighlight = shouldHighlight.ToLower();
 if(shouldHighlight == "true")
@@ -32,6 +32,7 @@ else
 }
 Console.WriteLine("Should I explode high rolls?: ");
 string shouldExplode = Console.ReadLine();
+shouldExplode = shouldExplode.ToLower();
 if (shouldExplode == "true")
 {
     explode = true;
@@ -46,6 +47,7 @@ else
 }
 Console.WriteLine("Should I combine all rolls into a single result?: ");
 string shouldCombine = Console.ReadLine();
+shouldCombine = shouldCombine.ToLower();
 if (shouldCombine == "true")
 {
     combine = true;
@@ -121,9 +123,6 @@ else
     Console.WriteLine($"Results: {result}");
 }
 
-
-
-
-
+Console.WriteLine("Press enter to close.");
 Console.ReadKey();
 
