@@ -88,7 +88,7 @@ if(highlight == true)
     }
     else if(sides == 20)
     {
-        List<int> x = diceList.FindAll(n => n == 10);
+        List<int> x = diceList.FindAll(n => n == 20);
         highlightList.AddRange(x);
 
     }
